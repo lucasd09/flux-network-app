@@ -3,7 +3,7 @@ import { ProjectsPage } from ".";
 
 const projectsRoute = {
   path: "projects",
-  element: <ProjectsPage />
+  element: <ProjectsPage />,
 };
 
 export default projectsRoute;

@@ -1,9 +1,13 @@
 import { Outlet } from "react-router-dom"
 import { Sidebar } from "./sidebar"
+import { SidebarProvider, SidebarTrigger } from "../components/ui/sidebar"
 
 export const AppLayout = () => {
-  return <div className="">
+  return <SidebarProvider>
     <Sidebar />
-    <Outlet />
-  </div>
+    <main>
+      <SidebarTrigger />
+      <Outlet />
+    </main>
+  </SidebarProvider>
 }
