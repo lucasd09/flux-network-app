@@ -1,9 +1,11 @@
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../../../../components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <header className="sticky top-0 z-50 bg-background backdrop-blur-md border-b border-accent">
@@ -32,10 +34,10 @@ const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-purple-500 text-purple-500 hover:bg-purple-50">
+            <Button variant="outline" className="border-purple-500 text-purple-500 hover:bg-purple-50" onClick={() => navigate('/login')}>
               Log in
             </Button>
-            <Button className="bg-purple-500 hover:bg-purple-600 text-white">
+            <Button className="bg-purple-500 hover:bg-purple-600 text-white" onClick={() => navigate('/register')}>
               Try for free
             </Button>
           </div>
@@ -84,10 +86,10 @@ const Navbar = () => {
                 Pricing
               </a>
               <div className="flex flex-col space-y-3 pt-3">
-                <Button variant="outline" className="w-full border-purple-500 text-purple-500 hover:bg-purple-50">
+                <Button variant="outline" className="w-full border-purple-500 text-purple-500 hover:bg-purple-50" onClick={() => navigate('/login')}>
                   Log in
                 </Button>
-                <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">
+                <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white" onClick={() => navigate('/register')}>
                   Try for free
                 </Button>
               </div>
