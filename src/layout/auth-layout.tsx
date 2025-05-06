@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom"
 
 export const AuthLayout = () => {
   return <div className="min-h-screen flex flex-col md:flex-row">
-    <div className="flex-1/6">
+    <div className="w-[600px]">
       <Outlet />
     </div>
-    <div className="hidden lg:flex flex-2 flex-col items-center justify-center bg-muted px-12">
+    <div className="hidden md:flex flex-2 flex-col items-center justify-center bg-muted px-12">
       <div className="max-w-md text-left">
         <h2 className="text-2xl md:text-3xl font-semibold text-team-purple-700 mb-4">
           Welcome to Flux Network

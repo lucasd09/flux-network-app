@@ -9,6 +9,9 @@
     }
   ],
   "compilerOptions": {
+    "types": [
+      "@types/bun"
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": [
