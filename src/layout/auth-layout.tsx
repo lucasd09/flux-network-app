@@ -1,6 +1,12 @@
-import { Outlet } from "react-router-dom"
+import { Navigate, Outlet } from "react-router-dom"
 
 export const AuthLayout = () => {
+  const token = localStorage.getItem('auth_token');
+
+  if (token) {
+    return <Navigate to={'/app'} />
+  }
+
   return <div className="min-h-screen flex flex-col md:flex-row">
     <div className="w-[600px]">
       <Outlet />
